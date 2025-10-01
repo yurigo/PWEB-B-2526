@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctame</title>
+</head>
+<body>
+    <form method="get">
+        <div>
+            
+            <label for="loginInput">login</label>
+            <input disabled id="loginInput" type="text" name="login" />
+
+        </div>
+        <div>
+            password
+            <input name="password" type="password" />
+        </div>
+        <div>
+            <p>
+                Qué pokémon te gusta?
+            </p>
+            <input id="radioSquirtle" type="radio" name="pokemon" value="squirtle" />
+            <label for="radioSquirtle">
+                squirtle
+            </label>
+            <input type="radio" name="pokemon" value="bulbasaur" />bulbasaur
+            <input type="radio" name="pokemon" value="charmarder" />charmander
+        </div>
+        <div>
+            <p>
+                Qué pokémon te gusta?
+            </p>
+            <input type="checkbox" name="pokemon2" value="squirtle" />
+            <input type="checkbox" name="pokemon2" value="bulbasaur" />
+            <input type="checkbox" name="pokemon2" value="charmarder" />
+        </div>
+        
+        <input type="number" name="edad" />
+        <label>
+            Cual es tu color favorito?
+        </label>
+        <input type="color" name="color"/>
+
+        <label>
+            Cuéntame tu vida
+        </label>
+        <textarea rows="4" cols="80">
+
+        </textarea>
+
+        <!-- <input type="submit"> -->
+        <button type="submit">Enviar!!</button>
+        <button type="reset">Borrar</button>
+    </form>
+</body>
+</html>
