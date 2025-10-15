@@ -1,0 +1,107 @@
+/* * {
+    color: red;
+} */
+
+
+body{
+    font-family: Montserrat, Consolas, monospace;
+}
+
+.important{
+    background-color: yellowgreen;
+    border: 3px dashed red;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+.super{
+    background-color: rgb(252, 0, 236);
+    border: 3px solid salmon;
+}
+
+#principal{
+    border: 5px solid black;
+    border-radius: 50px;
+}
+
+[title]{
+    color:red;
+}
+
+[title=titulo]{
+    font-size: 48px;
+}
+
+/* h1{
+    color: red;
+}
+
+h2{
+    color: red;
+}
+h3{
+    color: red;
+}
+
+h4{
+    color: red;
+}
+h5{
+    color: red;
+}
+
+h6{
+    color: red;
+} */
+
+h1, h2, h3, h4, h5, h6{
+    color: red;
+}
+
+p.important.super, h1[title=titulo]{
+    font-size:100px;
+}
+
+main h1{
+    box-shadow: 10px 10px 10px 10px black inset;
+}
+
+main > h1 {
+    color: purple;
+}
+
+h1 + p{
+    font-weight: 900;
+    color: gray;
+    background-color: black;
+}
+
+h1.otro ~ p{
+    font-weight: 900;
+    color: gray;
+    background-color: black;
+}
+
+p::first-letter{
+    font-size: 100px;
+    color: fuchsia;
+}
+
+p:hover{
+    transform: rotate(10deg);
+    background-color: aqua;
+    box-shadow: 10px 10px 10px 10px black;
+    transition: transform 500ms ease-in-out;
+
+
+
+
+
+
+
+
+
+}
