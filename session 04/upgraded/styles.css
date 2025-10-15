@@ -149,6 +149,7 @@ a {
  font-weight: 500;
  color: #fff;
  z-index: 2;
+ border-radius: calc( var(--border-radius) + var(--border-width));
 }
 
 a::after {
