@@ -1,0 +1,203 @@
+/* * {
+    color: red;
+} */
+
+
+body{
+    font-family: Montserrat, Consolas, monospace;
+}
+
+.important{
+    background-color: yellowgreen;
+    border: 3px dashed red;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+.super{
+    background-color: rgb(252, 0, 236);
+    border: 3px solid salmon;
+}
+
+#principal{
+    border: 5px solid black;
+    border-radius: 50px;
+}
+
+[title]{
+    color:red;
+}
+
+[title=titulo]{
+    font-size: 48px;
+}
+
+/* h1{
+    color: red;
+}
+
+h2{
+    color: red;
+}
+h3{
+    color: red;
+}
+
+h4{
+    color: red;
+}
+h5{
+    color: red;
+}
+
+h6{
+    color: red;
+} */
+
+h1, h2, h3, h4, h5, h6{
+    color: red;
+}
+
+p.important.super, h1[title=titulo]{
+    font-size:100px;
+}
+
+main h1{
+    box-shadow: 10px 10px 10px 10px black inset;
+}
+
+main > h1 {
+    color: purple;
+}
+
+h1 + p{
+    font-weight: 900;
+    color: gray;
+    background-color: black;
+}
+
+h1.otro ~ p{
+    font-weight: 900;
+    color: gray;
+    background-color: black;
+}
+
+p::first-letter{
+    font-size: 100px;
+    color: fuchsia;
+}
+
+p:hover{
+    transform: rotate(10deg);
+    background-color: aqua;
+    box-shadow: 10px 10px 10px 10px black;
+    transition: transform 500ms ease-in-out;
+
+
+
+
+
+
+
+
+
+}
+
+
+header{
+    position: fixed;
+    width:100%;
+    /* background-color: white; */
+    padding:20px;
+    font-size: 24px;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.255);
+    box-shadow: 0 0 10px 10px rgb(0 0 0 / 6%)
+}
+
+header + main {
+    padding-top: 100px;
+}
+
+
+/* nav > a{
+    padding-inline: 1em;
+    padding-block: 0.5em;
+    border: 1px solid salmon;
+    margin-inline: 0.5em;
+    border-radius: 10px;
+}
+
+nav > a:hover{
+    outline: 4px solid yellow;
+} */
+
+
+a {
+ --border-radius: 15px;
+ --border-width: 4px;
+ appearance: none;
+ position: relative;
+ padding: 1em 2em;
+ border: 0;
+ background-color: #212121;
+ font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+ font-size: 18px;
+ font-weight: 500;
+ color: #fff;
+ z-index: 2;
+}
+
+a::after {
+ --m-i: linear-gradient(#000, #000);
+ --m-o: content-box, padding-box;
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ padding: var(--border-width);
+ border-radius: var(--border-radius);
+ background-image: conic-gradient(
+		#488cfb,
+		#29dbbc,
+		#ddf505,
+		#ff9f0e,
+		#e440bb,
+		#655adc,
+		#488cfb
+	);
+ -webkit-mask-image: var(--m-i), var(--m-i);
+ mask-image: var(--m-i), var(--m-i);
+ -webkit-mask-origin: var(--m-o);
+ mask-origin: var(--m-o);
+ -webkit-mask-clip: var(--m-o);
+ mask-composite: exclude;
+ -webkit-mask-composite: destination-out;
+ filter: hue-rotate(0);
+ animation: rotate-hue linear 500ms infinite;
+ animation-play-state: paused;
+}
+
+a:hover::after {
+ animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+ to {
+  filter: hue-rotate(1turn);
+ }
+}
+
+a,
+a::after {
+ box-sizing: border-box;
+}
+
+a:active {
+ --border-width: 5px;
+}
