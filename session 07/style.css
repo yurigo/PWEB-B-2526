@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+    background-color: salmon;
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; */
+    grid-template-areas:
+        "a a a a a"
+        "b b b b c"
+        "b b b b c"
+        "b b b b c"
+        "d d d d d";
+    min-height: 100vh;
+    gap: 1em;
+    column-gap: 3em;
+}
+
+
+
+header{
+    grid-area: a;
+}
+
+main {
+    grid-area: b;
+}
+
+aside {
+    grid-area: c;
+    align-self: center;
+}
+
+footer{
+    grid-area: d;
+
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 2fr 5%);
+    /* grid-template-rows: 100px 50px; */
+    /* grid-auto-rows: 100px; */
+    max-width: 800px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    margin-top: 100px;
+
+    align-items: auto;
+    gap: 1em;
+    /* row-gap: 2em;
+    column-gap: 1em; */
+}
+
+section > div {
+    border: 4px solid blueviolet;
+    padding: 1em;
+    border-radius:  100px;
+    box-shadow: 8px 6px 0 0 red;
+}
+
+section > div.especialito{
+    border-color: yellowgreen;
+    /* grid-column-start: 1;
+    grid-column-end: -2;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+
+    /* grid-area: 1 / 2 / -2 / 4; */
+    
+}
+
+section.ejercicio{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 2fr 3fr;
+    grid-template-rows: 100px 50px 75px 100px;
+}
+
+section.ejercicio > div {
+    border-radius: 10px;
+}
+
+section.ejercicio > div:nth-child(2){
+    background-color: green;
+    grid-column-end: span 2;
+}
+
+section.ejercicio > div:nth-child(4){
+    background-color: red;
+    grid-row-end: span 2;
+    
+}
+
+section.ejercicio > div:nth-child(5){
+    background-color: blueviolet;
+    grid-row-end: span 2;
+}
+section.ejercicio > div:nth-child(6){
+    background-color: pink;
+
+    grid-column-end: span 3;
+    grid-row-end: span 2;
+}
+section.ejercicio > div:nth-child(7){
+    background-color: yellow;
+
+    grid-row-end: span 2;
+}
+section.ejercicio > div:nth-child(8){
+    background-color: gray;
+    grid-column-end: span 2;
+}
+section.ejercicio > div:nth-child(9){
+    background-color: darkmagenta;
+    grid-column-end: span 2;
+}
+
+@media (width < 600px){
+    body{
+        background-color: blue;
+        /* grid-template-areas:
+        "a "
+        "b"
+        "b"
+        "b"
+        "c"
+        "d"; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    section{
+        grid-template-columns: 1fr 1fr 0.5fr;
+    }
+}
