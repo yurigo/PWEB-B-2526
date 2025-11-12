@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --padding-caja: 10px;
+    --border-width-caja: 4px;
+}
+
+
+#hamburguer{
+    padding: 2em;
+}
+
+#hamburguer svg{
+    cursor: pointer;    
+
+}
+
+html{
+    cursor: url("pointer.svg"), auto;
+}
+
+h1{
+    scroll-margin-top: 100px;
+}
+
+
+main{
+    /* padding: 100px; */
+    /* cursor: url('alien.svg'), auto; */
+    /* cursor: url('p2.gif'), auto; */
+    padding-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body{
+    font-size:100%;
+}
+
+/* div{
+    display:inline-block;
+    background-color: salmon;
+    margin: 1em;
+    border: var(--border-width-caja) dashed green;
+    padding: var(--padding-caja);
+    width: calc(100px - 2 * var(--border-width-caja) - 2 * var(--padding-caja));
+    height: calc(100px - 2 * var(--border-width-caja) - 2 * var(--padding-caja));
+} */
+main > div{
+    display:inline-block;
+    background-color: salmon;
+    margin: 1em;
+    border: var(--border-width-caja) dashed green;
+    padding: var(--padding-caja);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    transform: rotate(45deg);
+
+}
+
+#loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100vh;
+    width: 100vw;
+
+    background-color: rgb(237, 237, 237);
+    padding: 30% 30%;
+    display: none;
+    /* animation: hideAnimation 1s linear 2s forwards; */
+}
+
+@keyframes hideAnimation {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+header{
+    background-color: transparent;
+    position:fixed;
+    width:100%;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 10px -8px black;
+
+    z-index:9999999;
+}
+
+
+h1{
+    padding-inline: 2em;
+    padding-block: 1em;
+    font-size: 4em;
+    color: red;
+    animation: changeColor 5s linear 0s infinite;
+}
+
+@keyframes changeColor {
+    0%, 100%{
+        color: rgb(255, 0, 0);
+    }
+    25%{
+        /* font-family: monospace; */
+        color: green;
+    }
+    50%{
+        color: blue;
+        /* font-size: 8em; */
+    }
+    75%{
+        color:salmon;
+    }
+}
+
