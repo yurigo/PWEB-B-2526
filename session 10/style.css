@@ -52,6 +52,7 @@ color: red;
     bottom: 0;
     background-color: white;
     padding: 4em 10em 3em 0em;
+    padding-top: 0em;
     z-index: 1;
     border-right: 3px solid black;
     /* display: none; */
@@ -73,6 +74,29 @@ color: red;
 
 #menu > #closeMenuButton:hover {
     color: red;
+}
+
+#menu > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    gap: 3em;
+    
+}
+
+#menu li::marker {
+    content: "🐸";
+}
+
+#menu li{
+    cursor: pointer;
+}
+
+#menu li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 main{
