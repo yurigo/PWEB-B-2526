@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+}
+
+body{
+    font-family: "Departure Mono";
+}
+
+main{
+    padding: 1em;
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p{
+    padding: 1em;
+    background-color: salmon;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+p.highlight {
+    background-color: red;
+    border-color: yellowgreen;
+    outline: 3px solid slateblue;
+    outline-offset: 3px;
+}
+
+header{
+    padding: .5em;
+}
+
+#hamburguer{
+    padding: 0 2em 0 .5em;
+    cursor:pointer;
+}
+
+#hamburguer:hover{
+    padding: 0 2em 0 .5em;
+color: red;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 4em 10em 3em 0em;
+    z-index: 1;
+    border-right: 3px solid black;
+    /* display: none; */
+    left: -1000px;
+    transition: left 250ms ease-in-out;
+}
+
+#menu.show{
+    /* display: block; */
+    left: 0px;
+}
+
+#menu > #closeMenuButton {
+    position: absolute;
+    top: 1.25em;
+    left: 1.5em;
+    cursor: pointer;
+}
+
+#menu > #closeMenuButton:hover {
+    color: red;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+p{
+    flex: 1 0 100px;
+}
+
+p > div {
+    display: inline-block;
+}
+
+p > div.clicked {
+    border: 4px solid black;
+    padding: .5em;
+    border-radius: 50%;
+}
+
